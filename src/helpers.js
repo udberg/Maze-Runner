@@ -21,3 +21,15 @@ export default {
         );
       }
     }
+
+    const nextHeight = Phaser.Math.Between(
+      lowestPlatformHeight,
+      highestPlatformHeight,
+    );
+
+    if (nextHeight > 0) {
+      return nextHeight;
+    }
+    return previousPlatform.y;
+  },
+  
