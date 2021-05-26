@@ -42,4 +42,11 @@ export default {
     ];
     return songArray[Phaser.Math.Between(0, songArray.length - 1)];
   },
+
+  getPlatformImage: platformWidth => {
+    const platformImages = ['plank1', 'plank2', 'plank3'];
+    return platformWidth > 200
+      ? platformImages[2]
+      : platformImages[Phaser.Math.Between(0, 1)];
+  },
   
