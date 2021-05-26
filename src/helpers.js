@@ -60,4 +60,12 @@ export default {
     }
   },
 
+  submitNameForm: input => {
+    let username = input.value;
+    if (username === '') {
+      username = 'Anonymous';
+    }
+
+    localStorage.setItem('username', username);
+  },
   
