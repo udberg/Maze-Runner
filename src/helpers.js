@@ -75,4 +75,21 @@ export default {
       { mode: 'cors' },
     ).then(response => response.json());
   },
-  
+
+  submitScore(username, score) {
+    fetch(
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lR6cnR2w4frbwCA1QKLu/scores',
+      {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          user: username,
+          score: score.toString(),
+        }),
+      },
+    );
+  },
+};
