@@ -49,4 +49,15 @@ export default {
       ? platformImages[2]
       : platformImages[Phaser.Math.Between(0, 1)];
   },
+
+  playJumpSound: scene => {
+    const jumps = ['jump1', 'jump2', 'jump3', 'jump4'];
+
+    if (Math.random() > 3 / 4) {
+      scene.sound.play(jumps[Phaser.Math.Between(0, jumps.length - 1)], {
+        volume: 0.85,
+      });
+    }
+  },
+
   
