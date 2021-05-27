@@ -19,3 +19,9 @@ describe('gets a random song selection', () => {
     expect(possiblePaths.includes(songInfo[1])).toBe(true);
   });
 });
+
+describe("gets the path of a platform image depending on a platform's length", () => {
+  const validKeys = ['plank1', 'plank2', 'plank3'];
+  const longPlatformLength = 201;
+  const shortPlatformLength = 199;
+  const randomPlatformLength = Phaser.Math.Between(100, 400);
