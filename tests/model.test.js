@@ -15,3 +15,7 @@ describe('constructs a new Model object with the desired properties', () => {
       expect(Object.hasOwnProperty.call(model, prop)).toBe(true);
     });
   });
+
+  it('has the correct value for its soundOn property', () => {
+    expect(model.soundOn).toBe(true);
+  });
