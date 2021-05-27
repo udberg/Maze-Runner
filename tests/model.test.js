@@ -23,3 +23,8 @@ describe('constructs a new Model object with the desired properties', () => {
   it('has the correct value for its musicOn property', () => {
     expect(model.musicOn).toBe(true);
   });
+
+  it('has the correct value for its bgMusicPlaying property', () => {
+    expect(model.bgMusicPlaying).toBe(false);
+  });
+});
