@@ -11,3 +11,8 @@ export default class BootScene extends Phaser.Scene {
       frameHeight: 37,
     });
   }
+
+   create() {
+    this.scene.start('Preloader');
+  }
+}
