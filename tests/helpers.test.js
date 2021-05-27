@@ -46,3 +46,19 @@ describe("gets the path of a platform image depending on a platform's length", (
     ).toBe(true);
   });
 });
+
+describe("saves an input's value to localStorage", () => {
+  const input = document.createElement('input');
+
+  it("saves the given input's value attribute as the value for the localStorage 'username' key", () => {
+    input.value = 'Test123';
+    helpers.submitNameForm(input);
+    expect(localStorage.getItem('username') === 'Test123').toBe(true);
+  });
+
+  it("saves the string 'Anonymous' as the value for the localStorage 'username' key if input.value is empty", () => {
+    input.value = '';
+    helpers.submitNameForm(input);
+    expect(localStorage.getItem('username') === 'Anonymous').toBe(true);
+  });
+});
