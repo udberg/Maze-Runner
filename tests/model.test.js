@@ -9,3 +9,9 @@ describe('constructs a new Model object with the desired properties', () => {
       Object.getPrototypeOf(model) === Object.getPrototypeOf(new Model()),
     ).toBe(true);
   });
+
+  it('return an object with all the correct properties', () => {
+    requiredProperties.forEach(prop => {
+      expect(Object.hasOwnProperty.call(model, prop)).toBe(true);
+    });
+  });
