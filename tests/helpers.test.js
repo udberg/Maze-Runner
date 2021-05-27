@@ -10,3 +10,12 @@ describe('gets a random song selection', () => {
     'assets/music/california_love.mp3',
     'assets/music/ms_jackson.mp3',
   ];
+
+  it("returns an array where the first element is the key of one of the project's possible background tracks", () => {
+    expect(possibleTitles.includes(songInfo[0])).toBe(true);
+  });
+
+  it("returns an array where the second element is the path of one of the project's possible background tracks", () => {
+    expect(possiblePaths.includes(songInfo[1])).toBe(true);
+  });
+});
