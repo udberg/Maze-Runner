@@ -376,3 +376,23 @@ export default class GameScene extends Phaser.Scene {
       (3 * this.game.config.height) / 4 - this.gameOverInstruction.height / 2,
     );
   }
+
+  moveBackground() {
+    this.sky.tilePositionX += 0.15;
+    this.mountains.tilePositionX += 0.3;
+    this.distantPines.tilePositionX += 0.6;
+    this.pines.tilePositionX += 0.9;
+    this.grass.tilePositionX += 1.75;
+  }
+
+  updateDisplays() {
+    this.timeDisplay
+      .setText(`${this.secondsRemaining}`)
+      .setStyle({
+        color: `rgba(${this.secondsElapsed * 6.25}, ${255
+          - this.secondsElapsed * 6.25}, 0)`,
+      });
+
+    this.goldDisplay.setText(`${this.score}`);
+  }
+}
