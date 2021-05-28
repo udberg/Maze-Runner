@@ -139,3 +139,16 @@ export default class GameScene extends Phaser.Scene {
         this.playerJumps = 3;
       }
     });
+
+    this.input.keyboard.on('keydown-SPACE', this.jump, this);
+
+    this.time.addEvent({
+      startAt: 0,
+      delay: 1000,
+      loop: true,
+      callback: () => {
+        this.secondsElapsed += 1;
+        this.secondsRemaining -= 1;
+      },
+    });
+  }
