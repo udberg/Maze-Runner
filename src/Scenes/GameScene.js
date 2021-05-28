@@ -220,3 +220,16 @@ export default class GameScene extends Phaser.Scene {
         .setVelocityX(this.gameOptions.platformStartSpeed * -1);
 
       this.physics.add.collider(this.platformGroup, coin, () => coin.setVelocityX(0));
+
+      coin.collectionAnimation = () => {
+        const collectedCoin = this.physics.add
+          .sprite(coin.x, coin.y - 50, 'coin')
+          .setVelocityX(-gameOptions.platformStartSpeed)
+          .setVelocityY(-50)
+          .setGravityY(49);
+        this.collectedCoinGroup.add(collectedCoin);
+        setTimeout(() => {
+          this.collectedCoinGroup.killAndHide(collectedCoin);
+          this.collectedCoinGroup.remove(collectedCoin);
+        }, 400);
+      };
