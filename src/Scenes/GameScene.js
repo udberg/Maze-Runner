@@ -42,3 +42,10 @@ export default class GameScene extends Phaser.Scene {
       fontSize: '50px',
       fontWeight: 'bold',
     });
+
+    this.goldIcon = this.add.sprite(40, 90, 'coin').setDisplaySize(50, 50);
+
+    this.mountains = this.add
+      .tileSprite(400, 250, null, null, 'mountain')
+      .setTilePosition(200, 128)
+      .setScale(1.2);
