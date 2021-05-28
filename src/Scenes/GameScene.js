@@ -302,3 +302,8 @@ export default class GameScene extends Phaser.Scene {
           coin.anims.play('revolving coin', true);
         }
       });
+
+      this.collectedCoinGroup.getChildren().forEach(collectedCoin => {
+        collectedCoin.anims.play('revolving coin', true);
+        collectedCoin.anims.setTimeScale(5);
+      });
