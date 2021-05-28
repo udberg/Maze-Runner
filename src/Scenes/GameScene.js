@@ -79,3 +79,9 @@ export default class GameScene extends Phaser.Scene {
       .setTileScale(3.5, 4);
 
     this.grass = this.physics.add.existing(this.grass, true);
+
+    this.platformGroup = this.add.group({
+      removeCallback(platform) {
+        platform.scene.platformPool.add(platform);
+      },
+    });
