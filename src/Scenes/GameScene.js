@@ -257,3 +257,8 @@ export default class GameScene extends Phaser.Scene {
       helpers.playJumpSound(this);
     }
   }
+
+  collectCoin(coin) {
+    coin.disableBody(true, true);
+    this.score += 1;
+  }
