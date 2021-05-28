@@ -185,3 +185,8 @@ export default class GameScene extends Phaser.Scene {
       this.gameOptions.spawnRange[0],
       this.gameOptions.spawnRange[1],
     );
+
+    if (this.platformGroup.getChildren().length > 1) {
+      this.addCoin(platform);
+    }
+  }
