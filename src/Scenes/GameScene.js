@@ -339,3 +339,8 @@ export default class GameScene extends Phaser.Scene {
         fill: '#fff',
       },
     );
+
+    this.finalScoreDisplay.setPosition(
+      this.game.config.width / 2 - this.finalScoreDisplay.width / 2,
+      this.game.config.height / 2 - this.finalScoreDisplay.height / 2,
+    );
