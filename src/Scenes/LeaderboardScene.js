@@ -11,3 +11,16 @@ export default class LeaderboardScene extends Phaser.Scene {
       scoresObject => scoresObject.result,
     );
     const topScores = scores.sort((a, b) => b.score - a.score).slice(0, 10);
+
+    this.zone = this.add.zone(
+      this.game.config.width / 2,
+      this.game.config.height / 2,
+      this.game.config.width * (3 / 4),
+      this.game.config.height * (4 / 5),
+    );
+    Phaser.Display.Align.In.TopCenter(this.add.text(0, 0, 'Leaderboard', { fontSize: '55px' }), this.zone);
+    const firstScoreHeight = 120;
+    const leftColumn = this.game.config.width / 3;
+    const rightColumn = this.game.config.width - leftColumn;
+    const fontSize = '40px';
+    const rowGap = 45;
