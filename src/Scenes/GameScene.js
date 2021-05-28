@@ -67,3 +67,15 @@ export default class GameScene extends Phaser.Scene {
       80,
       'ground',
     );
+
+    this.grass = this.add
+      .tileSprite(
+        this.game.config.width / 2,
+        this.game.config.height - 70,
+        this.game.config.width,
+        30,
+        'grass',
+      )
+      .setTileScale(3.5, 4);
+
+    this.grass = this.physics.add.existing(this.grass, true);
