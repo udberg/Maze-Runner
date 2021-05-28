@@ -152,3 +152,23 @@ export default class GameScene extends Phaser.Scene {
       },
     });
   }
+
+  addPlatform(platformWidth, posX) {
+    let platform;
+    if (this.platformPool.getLength()) {
+      platform = this.platformPool.getFirst();
+      platform.setPosition(posX, this.nextPlatformHeight);
+      platform.active = true;
+      platform.visible = true;
+      this.platformPool.remove(platform);
+      this.nextPlatformHeight = helpers.calculateNextPlatformHeight(
+        platform,
+        this.player,
+        this.game,
+      );
+    } else {
+      platform = this.physics.add.sprite(
+        posX,
+        this.nextPlatformHeight,
+        helpers.getPlatformImage(platformWidth),
+      );
