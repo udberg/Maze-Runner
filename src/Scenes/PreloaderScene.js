@@ -71,3 +71,8 @@ export default class PreloaderScene extends Phaser.Scene {
       assetText.destroy();
       this.ready();
     });
+
+    this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
+
+    const [songTitle, songURL] = helpers.getRandomSong();
+    this.sys.game.globals.model.chosenSongTitle = songTitle;
