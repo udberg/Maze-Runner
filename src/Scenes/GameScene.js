@@ -92,3 +92,11 @@ export default class GameScene extends Phaser.Scene {
       },
     });
     this.addPlatform(150, this.game.config.width + 150);
+
+    this.player = this.physics.add
+      .sprite(
+        this.gameOptions.playerStartPosition,
+        this.grass.y - 200,
+        'player',
+      )
+      .setScale(2);
