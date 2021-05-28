@@ -51,3 +51,13 @@ export default class LeaderboardScene extends Phaser.Scene {
           color: textColour,
         },
       );
+
+      this.add.text(
+        rightColumn,
+        firstScoreHeight + (rowGap * i),
+        topScores[i].score,
+        {
+          fontSize,
+          color: textColour,
+        },
+      );
