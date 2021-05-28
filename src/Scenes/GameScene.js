@@ -54,3 +54,16 @@ export default class GameScene extends Phaser.Scene {
       .tileSprite(400, 325, 800, null, 'pines')
       .setTilePosition(200, 0)
       .setScale(1.2);
+
+      this.pines = this.add
+      .tileSprite(400, 410, 800, null, 'distantPines')
+      .setTilePosition(200, 200)
+      .setScale(1.2);
+
+    this.ground = this.add.tileSprite(
+      this.game.config.width / 2,
+      this.game.config.height - 40,
+      this.game.config.width,
+      80,
+      'ground',
+    );
