@@ -30,3 +30,15 @@ export default class GameScene extends Phaser.Scene {
       border: '1px solid grey',
       background: 'rgba(200, 200, 200, 0.8)',
     });
+
+    this.timeIcon = this.add.sprite(
+      this.timeDisplay.x - 30,
+      this.timeDisplay.y + 20,
+      'stopwatch',
+    ).setDisplaySize(40, 40).setTintFill(0x999999);
+
+    this.goldDisplay = this.add.text(70, 67, `${this.score}`, {
+      color: 'gold',
+      fontSize: '50px',
+      fontWeight: 'bold',
+    });
