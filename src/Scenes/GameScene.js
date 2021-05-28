@@ -20,3 +20,13 @@ export default class GameScene extends Phaser.Scene {
     this.events.once('gameOver', () => {
       this.gameOver();
     });
+
+    this.sky = this.add.tileSprite(400, 150, null, null, 'sky').setScale(2);
+
+    this.timeDisplay = this.add.text(70, 20, `${this.secondsRemaining}`, {
+      color: 'rgb(0, 255, 0)',
+      fontSize: '44px',
+      fontWeight: 'bold',
+      border: '1px solid grey',
+      background: 'rgba(200, 200, 200, 0.8)',
+    });
