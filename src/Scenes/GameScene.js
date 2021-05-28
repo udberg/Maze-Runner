@@ -344,3 +344,17 @@ export default class GameScene extends Phaser.Scene {
       this.game.config.width / 2 - this.finalScoreDisplay.width / 2,
       this.game.config.height / 2 - this.finalScoreDisplay.height / 2,
     );
+
+    this.gameOverInstruction = this.add.text(
+      0,
+      0,
+      [
+        'Press M to return to the menu',
+        'Press L to view the leaderboard',
+        'Press P to play again',
+      ],
+      {
+        fontSize: '22px',
+        fill: '#fff',
+      },
+    );
