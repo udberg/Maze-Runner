@@ -29,3 +29,14 @@ export default class PreloaderScene extends Phaser.Scene {
       },
     });
     loadingText.setOrigin(0.5, 0.5);
+
+    const percentText = this.make.text({
+      x: width / 2,
+      y: height / 2 - 5,
+      text: '0%',
+      style: {
+        font: '18px monospace',
+        fill: '#ffffff',
+      },
+    });
+    percentText.setOrigin(0.5, 0.5);
