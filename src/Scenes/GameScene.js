@@ -247,3 +247,13 @@ export default class GameScene extends Phaser.Scene {
       this.coinGroup.add(coin);
     }
   }
+
+  jump() {
+    if (this.playerJumps > 0) {
+      this.player.jumping = true;
+      this.player.setVelocityY(gameOptions.jumpForce * -1);
+      this.playerJumps -= 1;
+      this.player.anims.play('jumping', false);
+      helpers.playJumpSound(this);
+    }
+  }
