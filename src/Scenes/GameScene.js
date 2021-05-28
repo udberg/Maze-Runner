@@ -314,3 +314,13 @@ export default class GameScene extends Phaser.Scene {
       this.events.emit('gameOver');
     }
   }
+
+  gameOver() {
+    this.physics.pause();
+    this.anims.pauseAll();
+    helpers.submitScore(localStorage.getItem('username'), this.score);
+
+    this.gameOverDisplay = this.add.text(0, 0, 'Time\'s Up!', {
+      fontSize: '64px',
+      fill: '#000',
+    });
