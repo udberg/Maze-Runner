@@ -34,13 +34,11 @@ More gold pieces are found on the highest platforms, so the player is encouraged
 
 ## Built With 🛠
 
-```
 - JavaScript
 - [PhaserJS](https://phaser.io/)
 - [npm](https://www.npmjs.com/) with [webpack](https://webpack.js.org/)
 - Linted with [ESLint](https://eslint.org/)
 - Tested with [Jest](https://jestjs.io/)
-```
 
 ## Contributing
 
