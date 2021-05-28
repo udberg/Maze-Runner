@@ -100,3 +100,7 @@ export default class GameScene extends Phaser.Scene {
         'player',
       )
       .setScale(2);
+
+      this.player.setGravityY(this.gameOptions.playerGravity);
+    this.player.setBodySize(6, 36);
+    this.player.jumping = false;
