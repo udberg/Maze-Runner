@@ -125,3 +125,10 @@ export default class GameScene extends Phaser.Scene {
       frameRate: 20,
       repeat: -1,
     });
+
+    this.physics.add.collider(this.player, this.platformGroup, () => {
+      if (this.player.body.touching.down) {
+        this.player.jumping = false;
+        this.playerJumps = 3;
+      }
+    });
