@@ -90,3 +90,14 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('plank1', 'assets/images/plank1.png');
     this.load.image('plank2', 'assets/images/plank2.png');
     this.load.image('plank3', 'assets/images/plank3.png');
+
+    this.load.spritesheet('ground', 'assets/images/ground_11.png', { frameWidth: 16, frameHeight: 16 });
+    this.load.spritesheet('player', 'assets/images/adventurer-sheet.png', { frameWidth: 50, frameHeight: 37 });
+    this.load.spritesheet('coin', 'assets/images/coin.png', { frameWidth: 16, frameHeight: 16 });
+    this.load.image('stopwatch', 'assets/images/stopwatch-solid.svg');
+    this.load.audio('jump1', 'assets/sfx/jump1.wav');
+    this.load.audio('jump2', 'assets/sfx/jump2.wav');
+    this.load.audio('jump3', 'assets/sfx/jump3.wav');
+    this.load.audio('jump4', 'assets/sfx/jump4.wav');
+    this.load.audio('coin1', 'assets/sfx/coin1.mp3');
+    this.load.audio(songTitle, songURL);
