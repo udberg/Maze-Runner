@@ -118,3 +118,10 @@ export default class GameScene extends Phaser.Scene {
       frameRate: 15,
       repeat: 0,
     });
+
+    this.anims.create({
+      key: 'revolving coin',
+      frames: this.anims.generateFrameNumbers('coin'),
+      frameRate: 20,
+      repeat: -1,
+    });
