@@ -41,3 +41,13 @@ export default class LeaderboardScene extends Phaser.Scene {
           textColour = 'white';
           break;
       }
+
+      this.add.text(
+        leftColumn,
+        firstScoreHeight + (rowGap * i),
+        topScores[i].user,
+        {
+          fontSize,
+          color: textColour,
+        },
+      );
