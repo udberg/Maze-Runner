@@ -132,3 +132,10 @@ export default class GameScene extends Phaser.Scene {
         this.playerJumps = 3;
       }
     });
+
+    this.physics.add.collider(this.player, this.grass, () => {
+      if (this.player.body.touching.down) {
+        this.player.jumping = false;
+        this.playerJumps = 3;
+      }
+    });
