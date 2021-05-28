@@ -324,3 +324,18 @@ export default class GameScene extends Phaser.Scene {
       fontSize: '64px',
       fill: '#000',
     });
+
+    this.gameOverDisplay.setPosition(
+      this.game.config.width / 2 - this.gameOverDisplay.width / 2,
+      this.game.config.height / 4 - this.gameOverDisplay.height / 2,
+    );
+
+    this.finalScoreDisplay = this.add.text(
+      0,
+      0,
+      `You collected ${this.score} gold pieces. Well done!`,
+      {
+        fontSize: '22px',
+        fill: '#fff',
+      },
+    );
