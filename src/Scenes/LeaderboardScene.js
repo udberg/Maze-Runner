@@ -24,3 +24,20 @@ export default class LeaderboardScene extends Phaser.Scene {
     const rightColumn = this.game.config.width - leftColumn;
     const fontSize = '40px';
     const rowGap = 45;
+
+    for (let i = 0; i < topScores.length; i += 1) {
+      let textColour;
+      switch (i) {
+        case 0:
+          textColour = 'gold';
+          break;
+        case 1:
+          textColour = 'silver';
+          break;
+        case 2:
+          textColour = '#cd7f32';
+          break;
+        default:
+          textColour = 'white';
+          break;
+      }
