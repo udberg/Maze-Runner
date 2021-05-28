@@ -233,3 +233,17 @@ export default class GameScene extends Phaser.Scene {
           this.collectedCoinGroup.remove(collectedCoin);
         }, 400);
       };
+
+      if (this.player) {
+        this.physics.add.overlap(this.player, coin, () => {
+          this.coinGroup.killAndHide(coin);
+          this.coinGroup.remove(coin);
+          this.collectCoin(coin);
+          coin.collectionAnimation();
+          this.sound.play('coin1', { volume: 0.5, detune: 0.5, rate: 1.3 });
+        });
+      }
+
+      this.coinGroup.add(coin);
+    }
+  }
