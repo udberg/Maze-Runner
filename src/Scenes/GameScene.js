@@ -190,3 +190,17 @@ export default class GameScene extends Phaser.Scene {
       this.addCoin(platform);
     }
   }
+
+  addCoin(platform) {
+    const topQuarter = this.game.config.height / 4;
+    const topHalf = topQuarter * 2;
+
+    if (platform) {
+      if (platform.y < topQuarter) {
+        platform.numberOfCoins = Phaser.Math.Between(3, 4);
+      } else if (platform.y < topHalf) {
+        platform.numberOfCoins = Phaser.Math.Between(2, 3);
+      } else {
+        platform.numberOfCoins = 1;
+      }
+    }
