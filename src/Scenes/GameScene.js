@@ -287,3 +287,18 @@ export default class GameScene extends Phaser.Scene {
           this.game.config.width + nextPlatformWidth / 2,
         );
       }
+
+      if (this.player.body.touching.down) {
+        this.player.anims.play('running', true);
+      } else if (!this.player.jumping) {
+        this.player.anims.play('jumping', false, 7);
+      }
+
+      this.coinGroup.getChildren().forEach(coin => {
+        if (coin.x + coin.width / 2 < 0) {
+          this.coinGroup.killAndHide(coin);
+          this.coinGroup.remove(coin);
+        } else {
+          coin.anims.play('revolving coin', true);
+        }
+      });
