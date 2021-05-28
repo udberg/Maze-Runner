@@ -307,3 +307,10 @@ export default class GameScene extends Phaser.Scene {
         collectedCoin.anims.play('revolving coin', true);
         collectedCoin.anims.setTimeScale(5);
       });
+
+      this.moveBackground();
+      this.updateDisplays();
+    } else {
+      this.events.emit('gameOver');
+    }
+  }
