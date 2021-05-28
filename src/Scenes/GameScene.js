@@ -358,3 +358,15 @@ export default class GameScene extends Phaser.Scene {
         fill: '#fff',
       },
     );
+
+    this.input.keyboard.on('keydown-M', () => {
+      this.scene.start('Title');
+    });
+
+    this.input.keyboard.on('keydown-P', () => {
+      this.scene.start('Game');
+    });
+
+    this.input.keyboard.on('keydown-L', () => {
+      this.scene.start('Leaderboard');
+    });
