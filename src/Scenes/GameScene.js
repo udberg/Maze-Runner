@@ -276,3 +276,14 @@ export default class GameScene extends Phaser.Scene {
           this.platformGroup.remove(platform);
         }
       }, this);
+
+      if (minDistance > this.nextPlatformDistance) {
+        const nextPlatformWidth = Phaser.Math.Between(
+          this.gameOptions.platformSizeRange[0],
+          this.gameOptions.platformSizeRange[1],
+        );
+        this.addPlatform(
+          nextPlatformWidth,
+          this.game.config.width + nextPlatformWidth / 2,
+        );
+      }
