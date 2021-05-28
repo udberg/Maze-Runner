@@ -370,3 +370,9 @@ export default class GameScene extends Phaser.Scene {
     this.input.keyboard.on('keydown-L', () => {
       this.scene.start('Leaderboard');
     });
+
+    this.gameOverInstruction.setPosition(
+      this.game.config.width / 2 - this.gameOverInstruction.width / 2,
+      (3 * this.game.config.height) / 4 - this.gameOverInstruction.height / 2,
+    );
+  }
