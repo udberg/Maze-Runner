@@ -6,10 +6,10 @@
 
 This is an infinite runner game made with phaserJS and compiled with Webpack. Testing is done with jestJS. The name of the game was inspired by a movie of the same name. The Maze Runner is a 2014 American dystopian science fiction film directed by Wes Ball, in his directorial debut, based on James Dashner's 2009 novel of the same name. Don't look for a maze in this game though, you won't find one! Haha...
 
-The aim of the game is to collect as many gold pieces as possible during sixty seconds.
-All gold pieces can be found on platforms which you can jump up to by hitting the spacebar - Player can jump once, twice or thrice consecutively.
+The aim of the game is to collect as many gold pieces as possible in sixty seconds.
+All gold pieces can be found on platforms which you can jump up to by hitting the spacebar - Player can jump once, twice, or thrice consecutively.
 
-More gold pieces are found on the highest platforms, so the player is encouraged to spend as much time as possible running and jumping on the high-up platforms and is penalised in lost earnings if they fall to the ground.
+More gold pieces are found on the highest platforms, so the player is encouraged to spend as much time as possible running and jumping on the high-up platforms and is penalized in lost earnings if they fall to the ground.
 
 ## Library Directory 📙
 
