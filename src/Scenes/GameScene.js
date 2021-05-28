@@ -207,3 +207,16 @@ export default class GameScene extends Phaser.Scene {
 
     const leftmostPoint = platform.x - platform.displayWidth / 2;
     const rightmostPoint = platform.x + platform.displayWidth / 2;
+
+    for (let i = 0; i < platform.numberOfCoins; i += 1) {
+      const coinPosition = Phaser.Math.FloatBetween(
+        leftmostPoint,
+        rightmostPoint,
+      );
+      const coin = this.physics.add
+        .sprite(coinPosition, platform.y - platform.displayHeight * 2, 'coin')
+        .setScale(2)
+        .setGravityY(1000)
+        .setVelocityX(this.gameOptions.platformStartSpeed * -1);
+
+      this.physics.add.collider(this.platformGroup, coin, () => coin.setVelocityX(0));
