@@ -172,3 +172,10 @@ export default class GameScene extends Phaser.Scene {
         this.nextPlatformHeight,
         helpers.getPlatformImage(platformWidth),
       );
+
+      platform.setDisplaySize(platformWidth, 25);
+      platform.setImmovable(true);
+      platform.setVelocityX(this.gameOptions.platformStartSpeed * -1);
+      this.platformGroup.add(platform);
+      this.nextPlatformHeight = helpers.calculateNextPlatformHeight(platform);
+    }
