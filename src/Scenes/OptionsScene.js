@@ -18,3 +18,8 @@ export default class OptionsScene extends Phaser.Scene {
 
     this.musicButton.setInteractive();
     this.soundButton.setInteractive();
+
+    this.musicButton.on('pointerdown', () => {
+      this.model.musicOn = !this.model.musicOn;
+      this.updateAudio();
+    });
