@@ -204,3 +204,6 @@ export default class GameScene extends Phaser.Scene {
         platform.numberOfCoins = 1;
       }
     }
+
+    const leftmostPoint = platform.x - platform.displayWidth / 2;
+    const rightmostPoint = platform.x + platform.displayWidth / 2;
