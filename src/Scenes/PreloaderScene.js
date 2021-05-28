@@ -76,3 +76,13 @@ export default class PreloaderScene extends Phaser.Scene {
 
     const [songTitle, songURL] = helpers.getRandomSong();
     this.sys.game.globals.model.chosenSongTitle = songTitle;
+
+    this.load.image('blueButton1', 'assets/ui/blue_button02.png');
+    this.load.image('blueButton2', 'assets/ui/blue_button03.png');
+    this.load.image('box', 'assets/ui/grey_box.png');
+    this.load.image('checkedBox', 'assets/ui/blue_boxCheckmark.png');
+    this.load.image('sky', 'assets/background/sky_cloud.png');
+    this.load.image('mountain', 'assets/background/mountain2.png');
+    this.load.image('distantPines', 'assets/background/pine2.png');
+    this.load.image('pines', 'assets/background/pine1.png');
+    this.load.image('grass', 'assets/images/grass_1.png');
