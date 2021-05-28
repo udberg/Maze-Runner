@@ -86,3 +86,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('distantPines', 'assets/background/pine2.png');
     this.load.image('pines', 'assets/background/pine1.png');
     this.load.image('grass', 'assets/images/grass_1.png');
+
+    this.load.image('plank1', 'assets/images/plank1.png');
+    this.load.image('plank2', 'assets/images/plank2.png');
+    this.load.image('plank3', 'assets/images/plank3.png');
