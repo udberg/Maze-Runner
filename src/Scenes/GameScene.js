@@ -179,3 +179,9 @@ export default class GameScene extends Phaser.Scene {
       this.platformGroup.add(platform);
       this.nextPlatformHeight = helpers.calculateNextPlatformHeight(platform);
     }
+
+    platform.displayWidth = platformWidth;
+    this.nextPlatformDistance = Phaser.Math.Between(
+      this.gameOptions.spawnRange[0],
+      this.gameOptions.spawnRange[1],
+    );
