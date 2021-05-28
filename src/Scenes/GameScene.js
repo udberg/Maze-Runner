@@ -85,3 +85,10 @@ export default class GameScene extends Phaser.Scene {
         platform.scene.platformPool.add(platform);
       },
     });
+
+    this.platformPool = this.add.group({
+      removeCallback(platform) {
+        platform.scene.platformGroup.add(platform);
+      },
+    });
+    this.addPlatform(150, this.game.config.width + 150);
