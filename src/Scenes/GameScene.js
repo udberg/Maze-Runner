@@ -104,3 +104,10 @@ export default class GameScene extends Phaser.Scene {
       this.player.setGravityY(this.gameOptions.playerGravity);
     this.player.setBodySize(6, 36);
     this.player.jumping = false;
+
+    this.anims.create({
+      key: 'running',
+      frames: this.anims.generateFrameNumbers('player', { start: 9, end: 13 }),
+      frameRate: 15,
+      repeat: -1,
+    });
