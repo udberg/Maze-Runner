@@ -101,3 +101,12 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.audio('jump4', 'assets/sfx/jump4.wav');
     this.load.audio('coin1', 'assets/sfx/coin1.mp3');
     this.load.audio(songTitle, songURL);
+}
+
+    ready() {
+    this.readyCount += 1;
+    if (this.readyCount === 2) {
+      this.scene.start('Title');
+    }
+  }
+}
