@@ -61,3 +61,16 @@ export default class LeaderboardScene extends Phaser.Scene {
           color: textColour,
         },
       );
+
+      this.add.text(
+        10,
+        10,
+        '<--- Press B to return to the menu',
+      );
+
+      this.input.keyboard.on('keydown-B', () => {
+        this.scene.start('Title');
+      });
+    }
+  }
+}
