@@ -111,3 +111,10 @@ export default class GameScene extends Phaser.Scene {
       frameRate: 15,
       repeat: -1,
     });
+
+    this.anims.create({
+      key: 'jumping',
+      frames: this.anims.generateFrameNumbers('player', { start: 15, end: 22 }),
+      frameRate: 15,
+      repeat: 0,
+    });
