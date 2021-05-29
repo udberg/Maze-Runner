@@ -50,12 +50,12 @@ export default class GameScene extends Phaser.Scene {
       .setTilePosition(200, 128)
       .setScale(1.2);
 
-      this.distantPines = this.add
+    this.distantPines = this.add
       .tileSprite(400, 325, 800, null, 'pines')
       .setTilePosition(200, 0)
       .setScale(1.2);
 
-      this.pines = this.add
+    this.pines = this.add
       .tileSprite(400, 410, 800, null, 'distantPines')
       .setTilePosition(200, 200)
       .setScale(1.2);
@@ -101,7 +101,7 @@ export default class GameScene extends Phaser.Scene {
       )
       .setScale(2);
 
-      this.player.setGravityY(this.gameOptions.playerGravity);
+    this.player.setGravityY(this.gameOptions.playerGravity);
     this.player.setBodySize(6, 36);
     this.player.jumping = false;
 

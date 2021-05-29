@@ -69,7 +69,7 @@ export default {
     localStorage.setItem('username', username);
   },
 
-   fetchScores() {
+  fetchScores() {
     return fetch(
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lR6cnR2w4frbwCA1QKLu/scores',
       { mode: 'cors' },

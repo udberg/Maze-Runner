@@ -24,7 +24,7 @@ export default class OptionsScene extends Phaser.Scene {
       this.updateAudio();
     });
 
-    his.soundButton.on('pointerdown', () => {
+    this.soundButton.on('pointerdown', () => {
       this.model.soundOn = !this.model.soundOn;
       this.updateAudio();
     });
