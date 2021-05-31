@@ -30,7 +30,7 @@ More gold pieces are found on the highest platforms, so the player is encouraged
 
  ## Screenshot
 
-![img](./assets/mockup.png)
+![img](./mockup.png)
 
 ## Built With 🛠
 
