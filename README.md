@@ -11,6 +11,7 @@ All gold pieces can be found on platforms which you can jump up to by hitting th
 
 More gold pieces are found on the highest platforms, so the player is encouraged to spend as much time as possible running and jumping on the high-up platforms and is penalized in lost earnings if they fall to the ground.
 
+
 ## Library Directory 📙
 
 | Contents                    |
