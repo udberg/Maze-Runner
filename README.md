@@ -89,7 +89,7 @@ To set this project up locally, follow these simple instructions:
 
 ## Live Demo
 
-[Live demo]()
+[Live demo](https://zealous-einstein-2fa834.netlify.app)
 
  ## Screenshot
 
