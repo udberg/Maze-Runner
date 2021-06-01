@@ -49,6 +49,31 @@ In the future, I will try to add more coins with varying values.
 I will also try to add game speed to increase difficulty.
 
 
+### Local Setup
+
+## Prerequisites
+
+Since the game's dependencies are managed by [npm](https://www.npmjs.com/), you must have **node.js** installed on your computer before following these set-up instructions. If you don't yet have node.js installed, you can choose a download method [here](https://nodejs.org/en/download/).
+
+## Setup Instructions
+
+To set this project up locally, follow these simple instructions:
+
+1. Open a Terminal and navigate to the location in your system where you would like to download the project. **New to Terminal? [Learn here](https://www.freecodecamp.org/news/conquering-the-command-line-f85f5e46c07c/).**
+
+2. Enter the following line of code to clone this repository:
+
+`git clone git@github.com:udberg/Maze-Runner.git`
+
+3. Now that the repository has been cloned, navigate inside it using `cd Maze-Runner`.
+
+4. The project's dependencies are managed by npm. The details of this project's dependencies can be found in `package.json` To install them, enter the following line of code in the Terminal.
+
+`npm install`
+
+5. Congratulations! All necessary files have been installed. To view the website, you can use the project's preconfigured npm script. Simply enter: `npm run start`. (This will bundle all relevant code into a single `build/bundle.min.js` file and then set up a local server to run the index.html file).
+
+
 ## Library Directory 📙
 
 | Contents                    |
