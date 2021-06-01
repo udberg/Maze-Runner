@@ -6,10 +6,47 @@
 
 This is an infinite runner game made with phaserJS and compiled with Webpack. Testing is done with jestJS. The name of the game was inspired by a movie of the same name. The Maze Runner is a 2014 American dystopian science fiction film directed by Wes Ball, in his directorial debut, based on James Dashner's 2009 novel of the same name. Don't look for a maze in this game though, you won't find one! Haha...
 
-The aim of the game is to collect as many gold pieces as possible in sixty seconds.
-All gold pieces can be found on platforms which you can jump up to by hitting the spacebar - Player can jump once, twice, or thrice consecutively.
+The aim of the game is to collect as many gold pieces as possible in sixty seconds while avoiding falling into the flames.
+All gold pieces can be found on platforms which you can jump up to by hitting the "W" button - Player can jump once, twice, or thrice consecutively.
 
 More gold pieces are found on the highest platforms, so the player is encouraged to spend as much time as possible running and jumping on the high-up platforms and is penalized in lost earnings if they fall to the ground.
+
+## Game Development
+
+> **_Explain what your initial objectives for the project were (at the end of the day 2) and which ones you did (or did not) achieve and why_**
+
+### Initial Aims
+
+In the Game Design Document I created on the second day of this 5-day project, I laid out an "Emotional Experience" which described how I would like the player to feel. To paraphrase from that section and others from the same document:
+
+1. The player feels **engaged**, consistently **interested**, but **never stressed**.
+2. The game is not predictable or boring, but neither does it punish the player arbitrarily. The player is **rewarded for skill** and for paying close attention to the **dependable rules and physics** of the game.
+3. The design prioritises consistency and attractiveness over complexity/realism.
+4. The sound of the game is not just a repetitive feature that becomes irritating. All sounds and music must contribute positively to the gameplay and experience of the game.
+5. The game does not emphasise changes in surface-level appearance that only serve to distract the player from the game itself. Players don't enjoy being needlessly distracted by features which are irrelevant to the gameplay.
+
+
+### Game Design
+
+An endless runner game, where a player hops from platform to platform collecting coins for as long as:
+- The player does not fall off the platform.
+- The player does not enter the flames.
+
+--- Movement
+The player can only jump two times.
+Press the 'W' key twice to double jump.
+
+-- Scores
+The player can increase his score by collecting coins.
+
+--- Game Over
+The total number of coins collected.
+An Input field to collect player names and save the player score.
+
+-- Future additions
+
+In the future, I will try to add more coins with varying values.
+I will also try to add game speed to increase difficulty.
 
 
 ## Library Directory 📙
@@ -31,7 +68,7 @@ More gold pieces are found on the highest platforms, so the player is encouraged
 
  ## Screenshot
 
-![img](./mockup.png)
+![img](./maze.png)
 
 ## Built With 🛠
 
